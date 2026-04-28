@@ -1,0 +1,640 @@
+.app-root {
+    -fx-font-family: "Avenir Next", "Inter", "Helvetica Neue", sans-serif;
+    -fx-background-color:
+        radial-gradient(center 50% 26%, radius 70%, rgba(111, 20, 24, 0.42), transparent),
+        linear-gradient(to bottom right, #090b10, #14100c 54%, #061412);
+}
+
+.start-screen,
+.table-screen,
+.final-screen {
+    -fx-background-color: transparent;
+}
+
+.hero-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 78px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.42), 22, 0.35, 0, 0);
+}
+
+.hero-subtitle {
+    -fx-font-size: 22px;
+    -fx-text-fill: #f4ead8;
+    -fx-opacity: 0.92;
+}
+
+.join-panel,
+.log-panel,
+.stat-box {
+    -fx-background-color: rgba(14, 18, 22, 0.82);
+    -fx-background-radius: 18;
+    -fx-border-color: rgba(243, 197, 107, 0.28);
+    -fx-border-radius: 18;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.50), 26, 0.2, 0, 8);
+    -fx-padding: 22;
+}
+
+.field-label,
+.mode-label,
+.status-label,
+.seat-name,
+.player-state,
+.stat-label {
+    -fx-text-fill: #e9dfce;
+}
+
+.casino-field {
+    -fx-background-color: #11161a;
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(243, 197, 107, 0.22);
+    -fx-border-radius: 12;
+    -fx-text-fill: #fff8e8;
+    -fx-prompt-text-fill: #8d8171;
+    -fx-padding: 12 14;
+    -fx-font-size: 15px;
+}
+
+.casino-button {
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 13 28;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff7e5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.42), 16, 0.2, 0, 5);
+}
+
+.casino-button:hover {
+    -fx-translate-y: -2;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.32), 22, 0.28, 0, 6);
+}
+
+.casino-button:disabled {
+    -fx-opacity: 0.42;
+}
+
+.join-button {
+    -fx-font-size: 18px;
+    -fx-padding: 16 30;
+}
+
+.button-gold {
+    -fx-background-color: linear-gradient(to bottom, #dba649, #8d5818);
+    -fx-border-color: rgba(255, 230, 154, 0.42);
+}
+
+.button-green {
+    -fx-background-color: linear-gradient(to bottom, #21724d, #0d3b2a);
+    -fx-border-color: rgba(141, 231, 188, 0.30);
+}
+
+.button-red {
+    -fx-background-color: linear-gradient(to bottom, #9e242a, #551015);
+    -fx-border-color: rgba(255, 136, 121, 0.32);
+}
+
+.button-dark {
+    -fx-background-color: linear-gradient(to bottom, #32363b, #15181d);
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+}
+
+.brand-small {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+}
+
+.mode-label {
+    -fx-font-size: 14px;
+    -fx-padding: 5 12;
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 999;
+}
+
+.section-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+}
+
+.main-message {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff3d6;
+}
+
+.round-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #d7a94d;
+    -fx-font-weight: bold;
+}
+
+.lobby-table-wrap {
+    -fx-min-height: 430;
+}
+
+.lobby-table,
+.casino-table {
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 80%, #123f2b, #062417);
+    -fx-border-color: rgba(243, 197, 107, 0.45);
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.68), 38, 0.28, 0, 12);
+}
+
+.lobby-table {
+    -fx-min-width: 300;
+    -fx-min-height: 190;
+    -fx-background-radius: 130;
+    -fx-border-radius: 130;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255, 236, 190, 0.58);
+}
+
+.casino-table {
+    -fx-background-radius: 210;
+    -fx-border-radius: 210;
+}
+
+.seat-card,
+.empty-seat,
+.player-panel {
+    -fx-background-color: rgba(18, 20, 22, 0.88);
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: rgba(243, 197, 107, 0.22);
+    -fx-padding: 12;
+}
+
+.empty-seat {
+    -fx-opacity: 0.58;
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+}
+
+.avatar {
+    -fx-min-width: 34;
+    -fx-min-height: 34;
+    -fx-alignment: center;
+    -fx-background-color: #7a1c22;
+    -fx-background-radius: 999;
+    -fx-text-fill: #fff5dc;
+    -fx-font-weight: bold;
+}
+
+.ready-state,
+.waiting-state {
+    -fx-font-weight: bold;
+}
+
+.ready-state {
+    -fx-text-fill: #f3c56b;
+}
+
+.waiting-state {
+    -fx-text-fill: #a9a197;
+}
+
+.player-column {
+    -fx-padding: 24;
+}
+
+.player-panel {
+    -fx-min-width: 178;
+}
+
+.active-player {
+    -fx-border-color: #f3c56b;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.34), 22, 0.25, 0, 0);
+}
+
+.eliminated-player {
+    -fx-opacity: 0.58;
+    -fx-border-color: rgba(255, 82, 82, 0.58);
+    -fx-background-color: rgba(24, 24, 27, 0.78);
+}
+
+.player-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff6e2;
+}
+
+.eliminated-name {
+    -fx-text-fill: #9e9588;
+}
+
+.roulette-label,
+.roulette-danger,
+.roulette-spent {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.roulette-label {
+    -fx-text-fill: #f3c56b;
+}
+
+.roulette-danger {
+    -fx-text-fill: #ff8b7f;
+    -fx-effect: dropshadow(gaussian, rgba(255, 105, 82, 0.42), 18, 0.25, 0, 0);
+}
+
+.roulette-spent {
+    -fx-text-fill: #6f6861;
+}
+
+.eliminated-badge {
+    -fx-background-color: rgba(122, 28, 34, 0.56);
+    -fx-background-radius: 999;
+    -fx-border-color: rgba(255, 139, 127, 0.46);
+    -fx-border-radius: 999;
+    -fx-padding: 4 10;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffb0a5;
+}
+
+.target-caption {
+    -fx-text-fill: #c7ba9f;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.target-card {
+    -fx-text-fill: #f3c56b;
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.4), 20, 0.32, 0, 0);
+}
+
+.current-player-chip {
+    -fx-background-color: rgba(0, 0, 0, 0.32);
+    -fx-background-radius: 999;
+    -fx-border-color: rgba(243, 197, 107, 0.20);
+    -fx-border-radius: 999;
+    -fx-padding: 8 18;
+    -fx-text-fill: #fff3d7;
+    -fx-font-weight: bold;
+}
+
+.card-back {
+    -fx-min-width: 112;
+    -fx-min-height: 150;
+    -fx-background-color:
+        linear-gradient(to bottom right, #261117, #751c24 52%, #1a0c10);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(243, 197, 107, 0.42);
+    -fx-border-radius: 16;
+    -fx-border-width: 2;
+}
+
+.card-back-text,
+.played-card-label {
+    -fx-text-fill: #f8d98d;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.hand-box {
+    -fx-background-color: rgba(5, 7, 9, 0.48);
+    -fx-background-radius: 24;
+    -fx-padding: 18 28;
+    -fx-min-height: 230;
+}
+
+.card-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.card-button:hover {
+    -fx-translate-y: -12;
+}
+
+.card-button:disabled {
+    -fx-opacity: 0.56;
+}
+
+.card-face {
+    -fx-min-width: 138;
+    -fx-min-height: 190;
+    -fx-background-color: linear-gradient(to bottom, #fff5dc, #e5d2aa);
+    -fx-background-radius: 18;
+    -fx-border-color: #362512;
+    -fx-border-radius: 18;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.52), 20, 0.22, 0, 8);
+    -fx-padding: 14;
+}
+
+.selected-card .card-face {
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+    -fx-border-color: #f3c56b;
+    -fx-border-width: 4;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.55), 28, 0.35, 0, 0);
+}
+
+.card-name-top,
+.card-name-bottom {
+    -fx-text-fill: #22170d;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.card-symbol {
+    -fx-text-fill: #7a1017;
+    -fx-font-size: 58px;
+    -fx-font-weight: bold;
+}
+
+.log-panel {
+    -fx-max-width: 330;
+    -fx-min-width: 300;
+}
+
+.log-title {
+    -fx-text-fill: #f3c56b;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.log-scroll {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.log-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.log-entry {
+    -fx-background-color: rgba(255, 255, 255, 0.055);
+    -fx-background-radius: 12;
+    -fx-padding: 10 12;
+    -fx-font-size: 13px;
+}
+
+.log-normal {
+    -fx-text-fill: #d6d0c5;
+}
+
+.log-accuse,
+.log-danger {
+    -fx-text-fill: #ff7979;
+}
+
+.log-win {
+    -fx-text-fill: #f3c56b;
+}
+
+.winner-label {
+    -fx-font-size: 62px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.45), 24, 0.32, 0, 0);
+}
+
+.stat-box {
+    -fx-min-width: 150;
+    -fx-min-height: 96;
+}
+
+.stat-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff3d7;
+}
+
+.risk-veil {
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 42%, rgba(126, 27, 32, 0.24), transparent);
+    -fx-alignment: center;
+}
+
+.risk-chamber {
+    -fx-background-color:
+        radial-gradient(center 50% 10%, radius 90%, rgba(126, 27, 32, 0.48), transparent),
+        linear-gradient(to bottom, rgba(18, 20, 23, 0.98), rgba(8, 10, 12, 0.98));
+    -fx-background-radius: 24;
+    -fx-border-color: rgba(243, 197, 107, 0.44);
+    -fx-border-radius: 24;
+    -fx-border-width: 2;
+    -fx-padding: 34 44;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.72), 42, 0.34, 0, 12);
+}
+
+.risk-title {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.30), 18, 0.28, 0, 0);
+}
+
+.risk-player {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff3d7;
+}
+
+.risk-meta {
+    -fx-padding: 2 0 2 0;
+}
+
+.risk-reason {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+}
+
+.revolver-art {
+    -fx-padding: 0;
+}
+
+.revolver-barrel,
+.revolver-body,
+.revolver-cylinder,
+.revolver-grip,
+.revolver-trigger {
+    -fx-background-color: linear-gradient(to bottom, #3a3f45, #171a1f);
+    -fx-border-color: rgba(243, 197, 107, 0.18);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.44), 12, 0.20, 0, 4);
+}
+
+.revolver-barrel {
+    -fx-min-width: 112;
+    -fx-min-height: 24;
+    -fx-background-radius: 12 18 18 12;
+    -fx-border-radius: 12 18 18 12;
+}
+
+.revolver-body {
+    -fx-min-width: 74;
+    -fx-min-height: 48;
+    -fx-background-radius: 26 18 18 24;
+    -fx-border-radius: 26 18 18 24;
+}
+
+.revolver-cylinder {
+    -fx-min-width: 52;
+    -fx-min-height: 52;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 58%, #626a72, #1c2026);
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-border-color: rgba(243, 197, 107, 0.34);
+}
+
+.revolver-grip {
+    -fx-min-width: 38;
+    -fx-min-height: 58;
+    -fx-background-color: linear-gradient(to bottom, #5a2b27, #26120f);
+    -fx-background-radius: 12 12 18 18;
+    -fx-border-radius: 12 12 18 18;
+    -fx-rotate: 20;
+}
+
+.revolver-trigger {
+    -fx-min-width: 34;
+    -fx-min-height: 28;
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(243, 197, 107, 0.34);
+    -fx-border-radius: 0 0 18 18;
+    -fx-border-width: 0 3 3 3;
+    -fx-effect: none;
+}
+
+.revolver-flash {
+    -fx-min-width: 44;
+    -fx-min-height: 44;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 58%, #fff8c8, #f3c56b 48%, #a82d2f 74%, transparent 76%);
+    -fx-background-radius: 6;
+    -fx-effect:
+        dropshadow(gaussian, rgba(243, 197, 107, 0.72), 26, 0.45, 0, 0),
+        dropshadow(gaussian, rgba(255, 82, 82, 0.34), 34, 0.35, 0, 0);
+}
+
+.risk-slots {
+    -fx-padding: 8 0 4 0;
+}
+
+.risk-slot {
+    -fx-min-width: 54;
+    -fx-min-height: 54;
+    -fx-background-color:
+        radial-gradient(center 42% 35%, radius 70%, #4d5258, #15181c 72%, #080a0d);
+    -fx-background-radius: 999;
+    -fx-border-color: rgba(255, 239, 196, 0.20);
+    -fx-border-radius: 999;
+    -fx-border-width: 2;
+    -fx-effect:
+        innershadow(gaussian, rgba(0, 0, 0, 0.78), 16, 0.35, 0, 3),
+        dropshadow(gaussian, rgba(0, 0, 0, 0.42), 12, 0.2, 0, 4);
+}
+
+.risk-slot-loaded {
+    -fx-background-color:
+        radial-gradient(center 42% 35%, radius 70%, #f4d486, #a3651f 72%, #351409);
+    -fx-border-color: rgba(255, 233, 159, 0.86);
+    -fx-effect:
+        innershadow(gaussian, rgba(58, 18, 0, 0.72), 12, 0.35, 0, 3),
+        dropshadow(gaussian, rgba(243, 197, 107, 0.48), 24, 0.34, 0, 0);
+}
+
+.risk-slot-safe {
+    -fx-background-color:
+        radial-gradient(center 42% 35%, radius 70%, #9be3b6, #23764d 70%, #0e2d21);
+    -fx-border-color: rgba(160, 244, 190, 0.86);
+}
+
+.risk-slot-hit {
+    -fx-background-color:
+        radial-gradient(center 42% 35%, radius 70%, #ff9a85, #a9272b 70%, #3f0c11);
+    -fx-border-color: rgba(255, 170, 146, 0.92);
+}
+
+.risk-slot-number {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff2d5;
+}
+
+.risk-count,
+.risk-detail {
+    -fx-text-fill: #d6d0c5;
+    -fx-font-size: 15px;
+}
+
+.risk-probability {
+    -fx-text-fill: #fff3d7;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.24), 16, 0.24, 0, 0);
+}
+
+.risk-message {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff8b7f;
+}
+
+.risk-tension-message {
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+    -fx-effect: dropshadow(gaussian, rgba(243, 197, 107, 0.38), 22, 0.34, 0, 0);
+}
+
+.risk-result {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+}
+
+.risk-result-danger {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff8b7f;
+    -fx-effect: dropshadow(gaussian, rgba(255, 82, 82, 0.42), 18, 0.28, 0, 0);
+}
+
+.risk-elimination-message {
+    -fx-padding: 4 0 2 0;
+}
+
+.risk-bang {
+    -fx-font-family: "Georgia";
+    -fx-font-size: 70px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff8b7f;
+    -fx-effect:
+        dropshadow(gaussian, rgba(255, 82, 82, 0.58), 30, 0.38, 0, 0),
+        dropshadow(gaussian, rgba(243, 197, 107, 0.32), 22, 0.30, 0, 0);
+}
+
+.risk-eliminated-name {
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff3d7;
+}
+
+.risk-eliminated-line {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f3c56b;
+}
+
+.risk-button {
+    -fx-font-size: 20px;
+    -fx-padding: 18 46;
+}
